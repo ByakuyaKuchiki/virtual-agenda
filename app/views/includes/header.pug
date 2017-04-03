@@ -1,1 +1,8 @@
 
+.menu_wrapper
+  nav
+    .main
+      - var navEltArray = [{additionalClass: "a", name: 'item'}, {additionalClass: 'd', name: 'item'}, {additionalClass: 's', name: 'item', subAdditionalClass: 'd', subElt: [{additionalClass: 's', name: 'item' }, { additionalClass: 'd', name: 'item' }, { additionalClass: 's', name: 'item' },  { additionalClass: 's',  name: 'item' }] }, { additionalClass: 's',  name: 'item' }]
+
+      for element in navEltArray
+        +navElement(element)
