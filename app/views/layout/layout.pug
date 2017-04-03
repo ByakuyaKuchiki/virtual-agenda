@@ -1,0 +1,14 @@
+include ../_components/all
+
+doctype html
+html(lang='de')
+	include ../includes/head.pug
+	- var bodyClass = 'template'
+	block vars
+	body(class=bodyClass)
+		include ../includes/header.pug
+		main.wrapper.page-border
+			.page-content
+				block content
+						section
+		include ../includes/footer.pug

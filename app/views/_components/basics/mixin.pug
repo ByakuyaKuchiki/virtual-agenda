@@ -1,0 +1,81 @@
+
+mixin image(options)
+
+  - figureClass = options.figureClass;
+  - imgUrl = options.imgUrl;
+  - imgAlt = options.imgAlt || "Alternative text";
+  - imgWidth = options.imgWidth;
+  - imgHeight = options.imgHeight;
+  - imgClass = options.imgClass;
+
+  if figureClass && imgUrl
+    figure(class=figureClass)
+      img(class=imgClass, src=imgUrl, width=imgWidth, height=imgHeight, alt=imgAlt )
+  else if imgUrl
+    img(class=imgClass, src=imgUrl, width=imgWidth, height=imgHeight, alt=imgAlt )
+
+
+
+mixin media(options)
+
+  - mediaType = options.mediaType || "picture" //- picture || videob|| youtube
+  - mediaId = options.mediaId || "";
+  - figureClass = options.figureClass;
+  - imgUrl = options.imgUrl;
+  - imgUrlSM = options.imgUrlSM || options.imgUrl;
+  - imgUrlMD = options.imgUrlMD || options.imgUrl;
+  - imgUrlLG = options.imgUrlLG || options.imgUrl;
+  - imgAlt = options.imgAlt || "";
+  - imgWidth = options.imgWidth || 'auto';
+  - imgHeight = options.imgHeight || 'auto';
+  - imgClass = options.imgClass;
+  - imgStyle = options.imgStyle || "margin: auto;";
+  
+  - videoExternalSrc = options.videoExternalSrc;
+  - mediaSources = options.mediaSources
+
+
+  if (mediaType == "picture" && imgUrl != "")
+    picture(class= figureClass, id= mediaId)
+      if imgUrlLG
+        source(media="(min-width: 64em)", srcset= imgUrlLG)
+      if imgUrlMD
+        source(media="(min-width: 37.5em)", srcset= imgUrlMD)
+      if imgUrlSM
+        source(media="(min-width: 0)", srcset= imgUrlSM)
+
+      img(class=imgClass, src=imgUrl, width=imgWidth, height=imgHeight, alt=imgAlt, style=imgStyle)
+
+  else if (mediaType == "video")
+    .video
+      .video__overlay
+        img.video__playIcon(src="resources/images/common/play-icon.png", width='87px', height='62px')
+      video.video__player(id=mediaId, class= figureClass, width='100%', height='auto')
+        
+        each mediaSource in mediaSources
+          source(src=mediaSource.link, type=mediaSource.type)
+  else if (mediaType == 'youtube')
+    .video--youtube
+      iframe.video__player(id= mediaId, class= figureClass, frameborder='0', allowtransparency='true', src= 'https://www.youtube.com/embed/' + videoExternalSrc + '?&rel=0&hd=1&controls=0&fullscreen=1&showinfo=0&hl=fra', width='100%', height='auto')
+
+
+
+mixin ctaBtn(options)
+
+  - var ctaClass = options.ctaClass;
+  - var ctaText = options.ctaText;
+  - var ctaLink = options.ctaLink || "#";
+
+  a( class=ctaClass, href=ctaLink )= ctaText
+
+
+mixin socialBtn(options)
+
+  - var ctaClass = options.ctaClass;
+  - var ctaIcon = options.ctaIcon;
+  - var ctaText = options.ctaText;
+  - var ctaLink = options.ctaLink || '#';
+
+  .cta__btn(class= ctaClass)
+    i.cta__icon.icon(class= 'icon-social-' + ctaIcon)
+    a.cta__text(href= ctaLink)= ctaText
