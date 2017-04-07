@@ -1,6 +1,12 @@
 aside
   .aside-section.align-center(title='Name: My System \nHost: 192.168.0.1')
     h1#system-logo.system-logo
-      i.fa.fa-cube
+      +media({
+        mediaType: 'picture',
+        imgUrl: 'Resources/images/default/Blacklight_Retribution.png',
+        imgClass: 'top-banner',
+        imgWidth: '100px',
+        imgStyle: " "
+      })
     time#system-time.system-time -
   #aside-menu-container

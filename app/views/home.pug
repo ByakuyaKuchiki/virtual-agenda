@@ -2,55 +2,79 @@ extends layout/layout.pug
 
 block vars
 	//- page name
-	- var bodyClass = 'home';
+	- var bodyClass = 'dashboard';
 	- var pageName = 'Start page';
 
 block append defaultVendors
 	script(src='//cdn.jsdelivr.net/g/jquery@2.1.4')
 	script(src='//cdn.jsdelivr.net/g/gridster.js@0.5.6')
 
+block append additionalVendors
+	script(async='', src='Resources/js/vendors/masonry.pkgd.min.js')
+
 block append assetStyle
 	link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', rel='stylesheet', media='all')
 	link(href='//cdn.jsdelivr.net/gridster.js/0.5.6/jquery.gridster.min.css', rel='stylesheet', media='all')
-block content
-	
-	main
-		// HEADER
+
+
+block content	
+	main.main--container
 		header.main-header
 			input#header-search(type='search', title='Search', placeholder='SEARCH')
 			#header-user
-				span dveneroni
-				img(src='#', title='dveneroni')
-		// CONTENT
+				span Search
 		.main-content
-			// DESKTOP - DASHBOARD
-			#desktop-dashboard.desktop(style='display: none')
+			#desktop-dashboard.desktop.card-list(style='display: none')
 				h1.desktop-heading Dashboard
-				.gridster
-					.gridster-item.align-center(style='line-height: 150px', data-row='1', data-col='1', data-sizex='1', data-sizey='1')
-						i.fa.fa-cube(style='font-size: 3rem')
-					.gridster-item.align-center(style='line-height: 150px', data-row='2', data-col='1', data-sizex='1', data-sizey='1')
-						i.fa.fa-cube(style='font-size: 3rem')
-					.gridster-item.align-center(style='line-height: 150px', data-row='3', data-col='1', data-sizex='1', data-sizey='1')
-						i.fa.fa-cube(style='font-size: 3rem')
-					.gridster-item.align-center(style='line-height: 150px', data-row='1', data-col='2', data-sizex='2', data-sizey='1')
-						i.fa.fa-cube(style='font-size: 3rem')
-					.gridster-item.align-center(style='line-height: 150px', data-row='2', data-col='2', data-sizex='2', data-sizey='2')
-						i.fa.fa-cube(style='font-size: 3rem')
-					.gridster-item.align-center(style='line-height: 150px', data-row='1', data-col='4', data-sizex='1', data-sizey='1')
-						i.fa.fa-cube(style='font-size: 3rem')
-					.gridster-item.align-center(style='line-height: 150px', data-row='2', data-col='4', data-sizex='2', data-sizey='1')
-						i.fa.fa-cube(style='font-size: 3rem')
-					.gridster-item.align-center(style='line-height: 150px', data-row='3', data-col='4', data-sizex='1', data-sizey='1')
-						i.fa.fa-cube(style='font-size: 3rem')
-					.gridster-item.align-center(style='line-height: 150px', data-row='1', data-col='5', data-sizex='1', data-sizey='1')
-						i.fa.fa-cube(style='font-size: 3rem')
-					.gridster-item.align-center(style='line-height: 150px', data-row='3', data-col='5', data-sizex='1', data-sizey='1')
-						i.fa.fa-cube(style='font-size: 3rem')
-					.gridster-item.align-center(style='line-height: 150px', data-row='1', data-col='6', data-sizex='1', data-sizey='1')
-						i.fa.fa-cube(style='font-size: 3rem')
-					.gridster-item.align-center(style='line-height: 150px', data-row='2', data-col='6', data-sizex='1', data-sizey='2')
-						i.fa.fa-cube(style='font-size: 3rem')
+				.card-container
+					+card({
+						cardTitle: 'card 1',
+						icon: 'moon',
+						cardDescription: `<i>Cogito ergo sum</i> 
+						is a Latin philosophical proposition by René Descartes usually translated into English as "I think, therefore I am". The phrase originally appeared in French as 
+						<i>je pense, donc je suis</i> 
+						in his Discourse on the Method, so as to reach a wider audience than Latin would have allowed. It appeared in Latin in his later Principles of Philosophy.`
+					})
+					+card({
+						cardTitle: 'card 1',
+						icon: 'sun',
+						cardDescription: `<i>Cogito ergo sum</i> 
+						is a Latin philosophical proposition by René Descartes usually translated into English as "I think, therefore I am". The phrase originally appeared in French as 
+						<i>je pense, donc je suis</i> 
+						in his Discourse on the Method, so as to reach a wider audience than Latin would have allowed. It appeared in Latin in his later Principles of Philosophy.`
+					})
+					+card({
+						cardTitle: 'card 1',
+						icon: 'storm',
+						cardDescription: `<i>Cogito ergo sum</i> 
+						is a Latin philosophical proposition by René Descartes usually translated into English as "I think, therefore I am". The phrase originally appeared in French as 
+						<i>je pense, donc je suis</i> 
+						in his Discourse on the Method, so as to reach a wider audience than Latin would have allowed. It appeared in Latin in his later Principles of Philosophy.`
+					})
+					+card({
+						cardTitle: 'card 1',
+						icon: 'snow',
+						cardDescription: `<i>Cogito ergo sum</i> 
+						is a Latin philosophical proposition by René Descartes usually translated into English as "I think, therefore I am". The phrase originally appeared in French as 
+						<i>je pense, donc je suis</i> 
+						in his Discourse on the Method, so as to reach a wider audience than Latin would have allowed. It appeared in Latin in his later Principles of Philosophy.`
+					})
+					+card({
+						cardTitle: 'card 1',
+						icon: 'cloud',
+						cardDescription: `<i>Cogito ergo sum</i> 
+						is a Latin philosophical proposition by René Descartes usually translated into English as "I think, therefore I am". The phrase originally appeared in French as 
+						<i>je pense, donc je suis</i> 
+						in his Discourse on the Method, so as to reach a wider audience than Latin would have allowed. It appeared in Latin in his later Principles of Philosophy.`
+					})
+					+card({
+						cardTitle: 'card 1',
+						icon: 'sun',
+						cardDescription: `<i>Cogito ergo sum</i> 
+						is a Latin philosophical proposition by René Descartes usually translated into English as "I think, therefore I am". The phrase originally appeared in French as 
+						<i>je pense, donc je suis</i> 
+						in his Discourse on the Method, so as to reach a wider audience than Latin would have allowed. It appeared in Latin in his later Principles of Philosophy.`
+					})
 			// DESKTOP - TEST UI
 			#desktop-testui.desktop(style='display: none')
 				h1.desktop-heading Test UI

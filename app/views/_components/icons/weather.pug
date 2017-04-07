@@ -1,0 +1,44 @@
+
+mixin weather(options)
+
+  - var name = options.name;
+  - var additionalClass = options.additionalClass;
+
+  case name
+    when 'sun'
+      div(class=additionalClass, icon='sunny')
+        span.sun
+    when 'cloud'
+      div(class=additionalClass, icon='cloudy')
+        span.cloud
+        span.cloud
+    when 'snow'
+      div(class=additionalClass, icon='snowy')
+        span.snowman
+        ul
+          li
+          li
+          li
+          li
+          li
+          li
+          li
+          li
+          li
+          li
+          li
+          li
+          li
+    when 'storm'
+      div(class=additionalClass, icon='stormy')
+        span.cloud
+        ul
+          li
+          li
+          li
+          li
+          li
+    when 'moon'
+      div(class=additionalClass, icon='supermoon')
+        span.moon
+        span.meteor

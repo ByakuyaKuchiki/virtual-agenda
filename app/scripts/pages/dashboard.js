@@ -1,3 +1,5 @@
+import { masonryInstance } from '../vendors/masonry.js';
+
 let instance = null;
 let $this = null;
 
@@ -15,6 +17,24 @@ class DashboardClass {
   }
 
   _call() {
+
+
+
+
+    const homeMasonryOptions = {
+      itemSelector: '.card-container',
+      options: {
+        itemSelector: '.card',
+        gutter: 30,
+        columnWidth: 350,
+        // fitWidth: true,
+        transitionDuration: 0
+      }
+    };
+
+    masonryInstance._startMasonry(homeMasonryOptions);
+
+
     var html = '';
     [
       {
