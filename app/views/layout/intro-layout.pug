@@ -1,0 +1,21 @@
+//- include ../_components/all
+
+doctype html
+html(lang='de')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+		link(rel='shortcut icon' href="favicon.ico")
+		block title
+			title= pageTitle
+		block assetStyle
+			block styles
+			link(href='Resources/css/intro.css?v=1.0', rel='stylesheet', media='all')
+		block vars
+	body.intro
+		block content
+			section
+		block scripts
+			block defaultVendors
+			block additionalVendors

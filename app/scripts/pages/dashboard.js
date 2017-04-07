@@ -77,7 +77,8 @@ class DashboardClass {
     $('.aside-menu-item').on('click', function () {
       $('.aside-menu-item-active').removeClass('aside-menu-item-active');
       $(this).addClass('aside-menu-item-active');
-      $('.desktop').hide();
+      $('.desktop').addClass('hide');
+      $('#' + $(this).data('desktop')).removeClass('hide');
       $('#' + $(this).data('desktop')).show();
     });
     $('.aside-menu-item[data-desktop="desktop-dashboard"]').trigger('click');

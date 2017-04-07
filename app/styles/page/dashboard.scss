@@ -84,7 +84,10 @@
         display: block;
     }
     .card-list {
-        display: block !important
+        display: block !important;
+        &.hide{
+            display: none !important;
+        }
     }
     .main--container {
         padding: 0 10px;
