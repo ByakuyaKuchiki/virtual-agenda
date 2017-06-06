@@ -1,6 +1,7 @@
 import { dashboardInstance } from './pages/dashboard.js';
 import { introInstance } from './pages/intro.js';
 import { cardInstance } from '../views/_components/cards/card.js';
+import { registerInstance } from '../views/_components/authentification/register.js';
 
 
 export class Main {
@@ -16,6 +17,7 @@ export class Main {
     if ($('body').hasClass('dashboard')) {
       dashboardInstance._call();
       cardInstance._call();
+      registerInstance._call();
     }
 
   }
