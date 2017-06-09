@@ -1,3 +1,5 @@
+$font-path: "fonts" !default;
+
 .align-left {
 	text-align: left;
 }
@@ -14,3 +16,59 @@
 .hide{
 	display: none !important;
 }
+
+
+
+
+@font-face {
+	font-family: 'Dancing in the Rainbow';
+	src: url('#{$font-path}/DancingintheRainbow/DancingintheRainbow.eot');
+	src: url('#{$font-path}/DancingintheRainbow/DancingintheRainbow.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-path}/DancingintheRainbow/DancingintheRainbow.woff2') format('woff2'),
+		url('#{$font-path}/DancingintheRainbow/DancingintheRainbow.woff') format('woff'),
+		url('#{$font-path}/DancingintheRainbow/DancingintheRainbow.ttf') format('truetype'),
+		url('#{$font-path}/DancingintheRainbow/DancingintheRainbow.svg#DancingintheRainbow') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Diane de France';
+	src: url('#{$font-path}/DianedeFrance/DianedeFrance.eot');
+	src: url('#{$font-path}/DianedeFrance/DianedeFrance.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-path}/DianedeFrance/DianedeFrance.woff2') format('woff2'),
+		url('#{$font-path}/DianedeFrance/DianedeFrance.woff') format('woff'),
+		url('#{$font-path}/DianedeFrance/DianedeFrance.ttf') format('truetype'),
+		url('#{$font-path}/DianedeFrance/DianedeFrance.svg#DianedeFrance') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Unispace-bold';
+	src: url('#{$font-path}/Unispace/Unispace-Bold.eot');
+	src: url('#{$font-path}/Unispace/Unispace-Bold.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-path}/Unispace/Unispace-Bold.woff2') format('woff2'),
+		url('#{$font-path}/Unispace/Unispace-Bold.woff') format('woff'),
+		url('#{$font-path}/Unispace/Unispace-Bold.ttf') format('truetype'),
+		url('#{$font-path}/Unispace/Unispace-Bold.svg#Unispace-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Unispace';
+	src: url('#{$font-path}/Unispace/Unispace.eot');
+	src: url('#{$font-path}/Unispace/Unispace.eot?#iefix') format('embedded-opentype'),
+		url('#{$font-path}/Unispace/Unispace.woff2') format('woff2'),
+		url('#{$font-path}/Unispace/Unispace.woff') format('woff'),
+		url('#{$font-path}/Unispace/Unispace.ttf') format('truetype'),
+		url('#{$font-path}/Unispace/Unispace.svg#Unispace') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$dancing : 'Dancing in the Rainbow', 'Arial', 'Sans sherif';
+$diane: 'Diane de France', 'Arial', 'Sans sherif';
+$uniSpace: 'Unispace', 'Arial', 'Sans sherif';
+$uniSpaceB: 'Unispace-bold', 'Arial', 'Sans sherif';
