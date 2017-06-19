@@ -16,8 +16,8 @@ class RegisterClass {
 
   _call() {
     $('.email').on("change keyup paste",
-      function () {
-        if ($(this).val()) {
+       (evt) => {
+        if ($(evt.currentTarget).val()) {
           $('.icon-paper-plane').addClass("next");
         } else {
           $('.icon-paper-plane').removeClass("next");
@@ -26,13 +26,13 @@ class RegisterClass {
     );
 
     $('.next-button').hover(
-      function () {
-        $(this).css('cursor', 'pointer');
+      (evt) => {
+        $(evt.currentTarget).css('cursor', 'pointer');
       }
     );
 
     $('.next-button.email').click(
-      function () {
+      (evt) => {
         console.log("Something");
         $('.email-section').addClass("fold-up");
         $('.password-section').removeClass("folded");
@@ -40,8 +40,8 @@ class RegisterClass {
     );
 
     $('.password').on("change keyup paste",
-      function () {
-        if ($(this).val()) {
+      (evt) => {
+        if ($(evt.currentTarget).val()) {
           $('.icon-lock').addClass("next");
         } else {
           $('.icon-lock').removeClass("next");
@@ -50,22 +50,21 @@ class RegisterClass {
     );
 
     $('.next-button').hover(
-      function () {
-        $(this).css('cursor', 'pointer');
+      (evt) => {
+        $(evt.currentTarget).css('cursor', 'pointer');
       }
     );
 
     $('.next-button.password').click(
-      function () {
-        console.log("Something");
+      (evt) => {
         $('.password-section').addClass("fold-up");
         $('.repeat-password-section').removeClass("folded");
       }
     );
 
     $('.repeat-password').on("change keyup paste",
-      function () {
-        if ($(this).val()) {
+      (evt) => {
+        if ($(evt.currentTarget).val()) {
           $('.icon-repeat-lock').addClass("next");
         } else {
           $('.icon-repeat-lock').removeClass("next");
@@ -74,10 +73,13 @@ class RegisterClass {
     );
 
     $('.next-button.repeat-password').click(
-      function () {
-        console.log("Something");
+      (evt) => {
         $('.repeat-password-section').addClass("fold-up");
         $('.success').css("marginTop", 0);
+        //-- register complete or not
+        setTimeout(() => {
+          $('.register-container').fadeOut(2000);
+        }, 1000);
       }
     );
   }

@@ -8,5 +8,9 @@ module.exports = function (app) {
   app.get('/home', function (req, res) {
     res.render('home.pug');
   });
+
+  app.get('/form', function (req, res) {
+    res.render('form.pug');
+  });
   
 };

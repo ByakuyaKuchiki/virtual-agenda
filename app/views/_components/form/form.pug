@@ -1,0 +1,27 @@
+mixin formGroup(options)
+  - var additionalClass = options.additionalClass;
+  - var inputAdditionalClass = options.inputAdditionalClass;
+  - var placeholderText = options.placeholderText;
+  - var typeText = options.typeText; //-- text || checkbox 
+  - var labelText = options.labelText;
+  - var error = options.error;
+  - var selectMultiple = options.selectMultiple || false;
+
+  - var fullClass = 'formgroup--' + typeText + ' ' + additionalClass;
+  .formgroup(class=fullClass)
+    if typeText == 'select'
+      label
+        if selectMultiple
+          v-select( v-model="selected" multiple :options="options")
+        else
+          v-select( v-model="selected" :options="options")
+        span.formgroup__label !{labelText}
+      span.formgroup__error !{error}
+    else
+      label
+        input.formgroup__input(type=typeText, class= inputAdditionalClass, placeholder=placeholderText)
+        if typeText == 'checkbox'
+          i.formgroup--checkbox.icon.icon-checkbox
+          i.formgroup--checkbox.icon.icon-checkbox--checked
+        span.formgroup__label !{labelText}
+      span.formgroup__error !{error}
