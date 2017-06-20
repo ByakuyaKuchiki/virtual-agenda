@@ -1,0 +1,32 @@
+@keyframes flare {
+  to {transform: translate(-.3em, .3em); opacity: .4; font-size: .2em;}
+}
+@keyframes move {
+  50% {transform: translateX(-.05em);}
+}
+@keyframes snow {
+  50% {opacity: 1;}
+  100% {transform: translate(-.1em, 15vmin);}
+}
+@keyframes snowman {
+  50% {border-radius: 60% 60% 30% 50%;}
+}
+@keyframes flash {
+	49% {background-color: var(--shadow);}
+	51% {background-color: var(--ring);}
+	53% {background-color: var(--shadow);}
+	57% {background-color: var(--ring);}
+	85% {background-color: var(--shadow);}
+}
+@keyframes rain {
+  10% {opacity: .4;}
+  50% {opacity: 1;}
+  100% {transform: translate(-.1em, .5em);}
+}
+@keyframes revolve {
+  to {transform: rotate(360deg);}
+}
+@keyframes meteor {
+  5% {opacity: 1;}
+  8% {transform: translate(-.6em, .6em) rotate(45deg); opacity: 0;}
+}

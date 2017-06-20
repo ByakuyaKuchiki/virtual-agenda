@@ -1,0 +1,134 @@
+.form {
+    // background: transparent url(//lorempixel.com/1200/800);
+    max-width: 1200px;
+    font: 18px $uniSpace;
+    &__title {
+        font: 5em $dancing;
+        line-height: 0em;
+        text-align: center;
+    }
+    &group {
+        display: table;
+        max-width: 800px;
+        padding: 25px 50px;
+        width: 100%;
+        label {
+            display: table;
+        }
+        &__input {
+            background-color: #fff;
+            border-color: transparent;
+            border-radius: 20px;
+            color: #000;
+            display: table-footer-group;
+            font-size: 15px;
+            min-width: 300px;
+            padding: 0 20px;
+            width: 100%;
+            &:hover,
+            &:focus {
+                border-color: rgba(255, 255, 255, 0.8);
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.075) inset, 0 0 20px rgba(255, 255, 255, 0.6);
+                outline: 0 none;
+            }
+        }
+        &__label {
+            display: table-header-group;
+        }
+        &__error {
+            display: none;
+        }
+        &--editor {
+            height: 100%;
+            max-width: 500px;
+            min-height: 500px;
+            position: relative;
+            width: 100%;
+            pre {
+                background-color: #000;
+                bottom: 0;
+                position: absolute;
+                height: 100%;
+                left: 0;
+                right: 0;
+                top: 0;
+                width: 100%;
+                * {
+                    transition: all 0s;
+                }
+            }
+        }
+        &--select {
+            max-width: 450px;
+            .v-select {
+                background: #fff;
+                border-radius: 20px;
+                .selected-tag {
+                    background-color: #363E48;
+                    border-radius: 20px;
+                    color: #fff;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 10px;
+                    .close {
+                        min-height: 0;
+                        min-width: 20px;
+                        color: #fff;
+                        opacity: .5;
+                    }
+                }
+                .dropdown-menu {
+                    border-radius: 20px;
+                    transition: all 0s;
+                    * {
+                        transition-delay: 20ms;
+                    }
+                }
+            }
+        }
+        &--checkbox {
+            input {
+                display: none;
+                &:checked+.icon{
+                  &.icon-checkbox--checked{
+                    display: inline-block;
+                  }
+                  &.icon-checkbox{
+                    display: none;
+                  }
+                }
+            }
+            .icon.icon-checkbox--checked{
+              display: none;
+            }
+            .formgroup__label,
+            &.icon {
+                display: inline-block;
+            }
+            &.icon {
+                font-size: 1.3em;
+                margin: 0 15px;
+            }
+        }
+    }
+    .ace{
+      &__title{
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px 10px 0;
+        &.active{
+          background-color: #fff;
+          border-color: rgba(255, 255, 255, 0.8);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.075) inset, 0 0 20px rgba(255, 255, 255, 0.6);
+          color: #000;
+          border-radius: 20px 20px 0 0;
+        }
+      }
+      &__content{
+        display: none;
+        &.active{
+          display: block;
+        }
+      }
+    }
+}

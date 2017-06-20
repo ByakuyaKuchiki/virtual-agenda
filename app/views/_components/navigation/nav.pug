@@ -1,0 +1,15 @@
+mixin navElement(options)
+  
+  - var additionalClass = options.additionalClass;
+  - var name = options.name || 'default';
+  - var subElt = options.subElt;
+  - var subAdditionalClass = options.subAdditionalClass;
+
+  li.nav-element(class=additionalClass)
+    a(href='') !{name}
+    if subElt
+      ul.sub-nav(class=subAdditionalClass)
+        for elt in subElt
+          +navElement(elt)
+
+
