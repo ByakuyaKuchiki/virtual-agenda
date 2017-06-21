@@ -17,7 +17,7 @@ export function svgToFont(params) {
         .pipe(iconfontCss({
             fontName: paths.icons.name,
             path: paths.origin + paths.icon.TEMPLATE,
-            targetPath: paths.origin + paths.css.src + '_icons.scss',
+            targetPath: paths.origin + paths.css.src + 'basics\_icons.scss',
             fontPath: paths.fonts.dest
         }))
         .pipe(iconfont({
