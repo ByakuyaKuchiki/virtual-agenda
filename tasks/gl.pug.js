@@ -1,8 +1,11 @@
 import paths from '../conf/paths.js';
 import gulp from 'gulp';
+import plumber from 'gulp-plumber';
+import pug from 'gulp-pug';
+import gulppuglint from 'gulp-pug-lint';
 
 function linting (done) {
-  return gulp.src(paths.pug.MAIN)
+  return gulp.src(paths.origin + paths.pug.src)
     .pipe(plumber((error) => {
       console.log(error);
       this.emit('end');
