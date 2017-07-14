@@ -12,5 +12,9 @@ module.exports = function (app) {
   app.get('/form', function (req, res) {
     res.render('form.pug');
   });
+
+  app.get('/dash', function (req, res) {
+    res.render('pages/dash.pug');
+  });
   
 };

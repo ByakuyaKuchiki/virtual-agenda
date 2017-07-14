@@ -57,11 +57,11 @@ block append additionalVendors
 
 				data: () => ({
 					selected: '',
-					options: ['weather', 'card', 'notes', 'lorem ipsum'],
+					options: ['weaTher', 'card', 'nOtes', 'lorem ipsum'],
 				}),				
 				watch: {
 					selected (value) {
-						value.forEach((elt, i)=>{console.log(elt)});
+						console.log(value.toLowerCase());
 					},
 				},
 			});
@@ -78,7 +78,7 @@ block content
 			inputAdditionalClass: 'required',
 			typeText: 'select',
 			labelText: 'Type',
-			error: 'You need to specify the Name'
+			error: 'You need to specify the type'
 		})
 
 		+formGroup({
@@ -89,8 +89,8 @@ block content
 			error: 'You need to specify the Name'
 		})
 		.editors
-			.ace__title.html HTML
-			.ace__title.css.active CSS
+			.ace__title.html.active HTML
+			.ace__title.css CSS
 			.formgroup.formgroup--editor.ace__content.ace__content--html.active
 				pre#html
 			.formgroup.formgroup--editor.ace__content.ace__content--css

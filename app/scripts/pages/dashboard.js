@@ -87,8 +87,8 @@ class DashboardClass {
       var date = new Date();
       var time = date.toLocaleString(navigator.language, { year: 'numeric', month: '2-digit', day: '2-digit' }) + '<br>' + date.toLocaleString(navigator.language, { hour: '2-digit', minute: '2-digit' });
       var element = document.getElementById('system-time');
-      element.dateTime = date.toISOString();
-      element.innerHTML = time;
+      // element.dateTime = date.toISOString();
+      // element.innerHTML = time;
     };
     updateTime();
     setInterval(updateTime, 1000);

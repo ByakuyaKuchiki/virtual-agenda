@@ -1,0 +1,35 @@
+extends ../layout/layout.pug
+
+block vars
+    //- page name
+    - var bodyClass = 'dashborad--2';
+    - var pageName = 'dashboard';
+block append defaultVendors
+    script(src='//cdn.jsdelivr.net/g/jquery@2.1.4')
+
+block append additionalVendors
+
+block content
+    .navigation
+        +menuLevel({
+            menuClass: 'solid',
+            menuElements: [
+                {menuName: 'User', menuIcon: 'icon-user', menuClass: 'js-user-menu'},
+                {menuName: 'Applications', menuIcon: 'icon-rocket', menuClass: 'js-app-menu'},
+                {menuName: 'menu', menuIcon: 'icon-user', menuClass: 'class'},
+                {menuName: 'menu', menuIcon: 'icon-user', menuClass: 'class'},
+                {menuName: 'menu', menuIcon: 'icon-rocket', menuClass: 'class'},
+                {menuName: 'menu', menuIcon: 'icon-user', menuClass: 'class'},
+                {menuName: 'menu', menuIcon: 'icon-user', menuClass: 'class'},
+                {menuName: 'menu', menuIcon: 'icon-rocket', menuClass: 'class'},
+                {menuName: 'return', menuIcon: 'icon-back', menuClass: 'js-close-menu'}
+            ],
+            menuSubElements: [
+                {type: 'picture', menuName: 'menu', imageUrlLink: '//lorempixel.com/400/400', menuClass: 'class'},
+                {type: 'picture', menuName: 'menu', imageUrlLink: '//lorempixel.com/400/400', menuClass: 'class'},
+                {type: 'picture', menuName: 'menu', imageUrlLink: '//lorempixel.com/400/400', menuClass: 'class'},
+                {type: 'picture', menuName: 'menu', imageUrlLink: '//lorempixel.com/400/400', menuClass: 'class'},
+                {type: 'picture', menuName: 'menu', imageUrlLink: '//lorempixel.com/400/400', menuClass: 'class'},
+                {type: 'picture', menuName: 'menu', imageUrlLink: '//lorempixel.com/400/400', menuClass: 'class'}
+            ]
+        })

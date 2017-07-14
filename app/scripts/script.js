@@ -4,6 +4,8 @@ import { cardInstance } from '../views/_components/cards/card.js';
 import { registerInstance } from '../views/_components/authentification/register.js';
 import { uiControlInstance } from './utilities/ui-control.js';
 
+
+import {menuInstance} from '../views/new_components/menu/menu.js';
 export class Main {
 
   constructor() {
@@ -21,6 +23,7 @@ export class Main {
       registerInstance._call();
     }
 
+    menuInstance._switchingMenu();
   }
 }
 

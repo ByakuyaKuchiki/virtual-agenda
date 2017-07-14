@@ -53,7 +53,7 @@ let nbrWarningJS;
 // ########################################
 
 const project = {
-  app: require('./bower.json').appPath || 'app',
+  app: 'app',
   dist: 'build',
   tmp: '.tmp'
 };
