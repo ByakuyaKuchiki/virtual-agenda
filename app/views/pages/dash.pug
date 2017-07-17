@@ -33,3 +33,10 @@ block content
                 {type: 'picture', menuName: 'menu', imageUrlLink: '//lorempixel.com/400/400', menuClass: 'class'}
             ]
         })
+    .content
+        +showCard({
+            cardType: 'text',
+            cardTitle: 'my Title',
+            backgroundImage: '//lorempixel.com/400/400',
+            cardContentText: 'lorem ipsum'
+        })

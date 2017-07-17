@@ -1,0 +1,60 @@
+.card-show-case {
+    background-color: $defaultColor;
+    border-radius: 30px;
+    display: block;
+    height: 400px;
+    position: relative;
+    width: 300px;
+    &__control {
+        color: $black;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 25px;
+    }
+    &__background {
+        position: relative;
+        &__pic {
+            border-radius: 30px;
+            height: 350px;
+            position: absolute;
+            width: 100%;
+        }
+        &__img {
+            border-radius: 30px;
+            height: 350px;
+            width: 100%;
+        }
+    }
+    &__commands {
+        bottom: 10px;
+        display: flex;
+        justify-content: space-around;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+    .commands{
+        &__nav{
+            cursor: pointer;
+            font-size: 25px;
+            &--left,
+            &--right{
+                text-shadow: 2px 2px 4px $black;
+                &:hover{
+                    color: transparent;
+                }
+            }
+            &--text{
+                font-size: 18px !important;
+            }
+        }
+    }
+    .sub-command{
+        &__item{
+            display: none;
+            &.active{
+                display: block;
+            }
+        }
+    }
+}

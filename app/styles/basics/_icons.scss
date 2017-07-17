@@ -1,21 +1,27 @@
-$icomoon-font-path: "fonts" !default;
+$icomoon-font-path: "fonts/tsiry" !default;
 
-$icon-back: "\e900";
+$icon-right: "\e904";
+$icon-left: "\e905";
+$icon-back: "\e903";
 $icon-home: "\e902";
 $icon-headphones: "\e910";
 $icon-bubbles: "\e96f";
 $icon-user: "\e971";
 $icon-rocket: "\e9a5";
 $icon-smile: "\e9e1";
+$icon-close: "\ea0f";
+$icon-pin-outline: "\e900";
+$icon-pinned: "\e901";
+
 
 
 @font-face {
   font-family: 'tsiry';
-  src:  url('#{$icomoon-font-path}/tsiry.eot?dmhzor');
-  src:  url('#{$icomoon-font-path}/tsiry.eot?dmhzor#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/tsiry.ttf?dmhzor') format('truetype'),
-    url('#{$icomoon-font-path}/tsiry.woff?dmhzor') format('woff'),
-    url('#{$icomoon-font-path}/tsiry.svg?dmhzor#tsiry') format('svg');
+  src:  url('#{$icomoon-font-path}/tsiry.eot?ent314');
+  src:  url('#{$icomoon-font-path}/tsiry.eot?ent314#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/tsiry.ttf?ent314') format('truetype'),
+    url('#{$icomoon-font-path}/tsiry.woff?ent314') format('woff'),
+    url('#{$icomoon-font-path}/tsiry.svg?ent314#tsiry') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -35,6 +41,17 @@ $icon-smile: "\e9e1";
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-right {
+  &:before {
+    content: $icon-right;
+  }
+}
+.icon-left {
+  &:before {
+    content: $icon-left;
+  }
+}
 .icon-back {
   &:before {
     content: $icon-back;
@@ -68,6 +85,21 @@ $icon-smile: "\e9e1";
 .icon-smile {
   &:before {
     content: $icon-smile;
+  }
+}
+.icon-close {
+  &:before {
+    content: $icon-close;
+  }
+}
+.icon-pin-outline {
+  &:before {
+    content: $icon-pin-outline;
+  }
+}
+.icon-pinned {
+  &:before {
+    content: $icon-pinned;
   }
 }
 
