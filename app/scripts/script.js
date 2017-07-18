@@ -6,6 +6,7 @@ import { uiControlInstance } from './utilities/ui-control.js';
 
 
 import {menuInstance} from '../views/new_components/menu/menu.js';
+import {showCaseInstance} from '../views/new_components/cards/show-case.js';
 export class Main {
 
   constructor() {
@@ -21,6 +22,11 @@ export class Main {
       dashboardInstance._call();
       cardInstance._call();
       registerInstance._call();
+    }
+
+    if($('body').hasClass('dashboard--2')){
+      console.log('test');
+      showCaseInstance._cardCall();
     }
 
     menuInstance._switchingMenu();

@@ -35,12 +35,12 @@ mixin showCard(options)
             })
             .card-show-case__content__title= cardTitle
             if cardType == 'text'
-                .card-show-case__content= cardContentText
+                .card-show-case__content__detail.active= cardContentText
             else if cardType == 'images'
                 +media({
                     mediaType: 'picture',
-                    figureClass: 'card-show-case__content__pic',
-                    imgClass: 'card-show-case__content__img',
+                    figureClass: 'card-show-case__content__detail',
+                    imgClass: 'card-show-case__content__detail--img',
                     imgUrl: cardContentImage
                 })
         .card-show-case__commands.commands

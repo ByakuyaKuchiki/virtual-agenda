@@ -5,6 +5,47 @@
     height: 400px;
     position: relative;
     width: 300px;
+    &__content {
+        &__title,
+        &__detail {
+            align-items: center;
+            border-radius: 30px;
+            display: none;
+            height: 100%;
+            justify-content: center;
+            max-height: 250px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding: 20px;
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            z-index: 0;
+            &::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 0transparent;
+                background-color: transparent;
+            }
+            &::-webkit-scrollbar {
+                width: 0;
+                background-color: transparent;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 0;
+                -webkit-box-shadow: inset 0 0 0 transparent;
+                background-color: transparent;
+            }
+        }
+        &__title {
+            &.active {
+                display: flex;
+            }
+        }
+        &__detail {
+            &.active {
+                display: block;
+            }
+        }
+    }
     &__control {
         color: $black;
         display: flex;
@@ -33,26 +74,26 @@
         position: absolute;
         width: 100%;
     }
-    .commands{
-        &__nav{
+    .commands {
+        &__nav {
             cursor: pointer;
             font-size: 25px;
             &--left,
-            &--right{
+            &--right {
                 text-shadow: 2px 2px 4px $black;
-                &:hover{
+                &:hover {
                     color: transparent;
                 }
             }
-            &--text{
+            &--text {
                 font-size: 18px !important;
             }
         }
     }
-    .sub-command{
-        &__item{
+    .sub-command {
+        &__item {
             display: none;
-            &.active{
+            &.active {
                 display: block;
             }
         }
