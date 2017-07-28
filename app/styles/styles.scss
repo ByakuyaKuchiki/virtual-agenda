@@ -1,5 +1,6 @@
 @import './variables/vars';
 @import './basics/base';
+
 @import './animations/anim';
 
 @import './icons/icons';
@@ -10,9 +11,9 @@
 @import './basics/base';
 @import '../views/_components/components';
 
-@import './page/pages';
+// @import './page/pages';
 
 // new components
-@import '../views/new_components/menu/menu';
+// @import '../views/new_components/menu/menu';
 @import '../views/new_components/cards/show-case';
 

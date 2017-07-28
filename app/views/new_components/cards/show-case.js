@@ -29,7 +29,6 @@ class ShowCaseClass {
     }
     //-- card
     _cardCall() {
-        console.log('card');
         //-- switchState
         $('.sub-command').on('click', '.sub-command__item', (evt) => {
             evt.preventDefault();
@@ -51,7 +50,8 @@ class ShowCaseClass {
         $('.card-show-case').on('click', '.card-show-case__content__title', (evt) => {
             evt.preventDefault();
             $(evt.currentTarget).removeClass('active');
-            $(evt.currentTarget).closest('.card-show-case__content').find('.card-show-case__content__detail').addClass('active');
+            const element = $(evt.currentTarget).closest('.card-show-case__content').find('.card-show-case__content__detail').addClass('active');
+            $this._autoScroll(element, 5);
         });
 
         $('.card-show-case').on('click', '.card-show-case__content__detail', (evt) => {

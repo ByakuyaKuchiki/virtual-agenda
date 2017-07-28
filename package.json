@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "compass": "^0.1.1",
     "compression": "^1.6.2",
     "cookie-parser": "^1.4.3",
     "cors": "^2.7.1",
@@ -24,6 +25,7 @@
     "express": "^4.14.0",
     "express-session": "^1.14.0",
     "flexboxgrid-sass": "^8.0.5",
+    "gulp-compass": "^2.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^2.3.0",
     "gulp-iconfont": "^8.0.1",
