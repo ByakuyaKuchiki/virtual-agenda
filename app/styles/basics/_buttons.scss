@@ -1,0 +1,59 @@
+$font_size: 22px;
+$width: 124px;
+$height: 44px;
+$bg: #92ad39;
+$bg_hover: lighten($bg, 5%);
+$txt_color: white;
+$bg_shadow: rgba(0, 0, 0, 0.4);
+@mixin middle($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+.button {
+    display: block;
+    font-size: $font_size;
+    text-align: center;
+    line-height: $height;
+    text-decoration: none;
+    color: $txt_color;
+    background-color: $bg;
+    border-radius: 4px;
+    margin-top: (-$height)/2;
+    @include middle($width, $height);
+    text-shadow: 0 -1px -1px darken($bg, 7%);
+    box-shadow: 0 4px 0 darken($bg, 7%), 0 5px 5px 1px $bg_shadow;
+    transition: all .15s ease-in-out;
+    &:hover {
+        background-color: $bg_hover;
+        text-shadow: 0 -1px -1px darken($bg_hover, 7%);
+        box-shadow: 0 4px 0 darken($bg_hover, 7%), 0 5px 5px 1px $bg_shadow;
+    }
+    &:active {
+        margin-top: (-$height)/2 + 4 !important;
+        box-shadow: none !important;
+    } 
+    //-- 1944 Mustang theme
+    &--basic {
+        background-color: $thm-1__over;
+        text-shadow: 0 -1px -1px darken($thm-1__over, 7%);
+        box-shadow: 0 4px 0 darken($thm-1__over, 7%), 0 5px 5px 1px $bg_shadow;
+        transition: all .15s ease-in-out;
+        &:hover {
+            background-color: lighten($thm-1__over, 5%);
+            text-shadow: 0 -1px -1px darken(lighten($thm-1__over, 5%), 7%);
+            box-shadow: 0 4px 0 darken(lighten($thm-1__over, 5%), 7%), 0 5px 5px 1px $bg_shadow;
+        }
+    }
+    &--secondary {
+        background-color: $thm-1__layer-2;
+        text-shadow: 0 -1px -1px darken($thm-1__layer-2, 7%);
+        box-shadow: 0 4px 0 darken($thm-1__layer-2, 7%), 0 5px 5px 1px $bg_shadow;
+        transition: all .15s ease-in-out;
+        &:hover {
+            background-color: lighten($thm-1__layer-2, 5%);
+            text-shadow: 0 -1px -1px darken(lighten($thm-1__layer-2, 5%), 7%);
+            box-shadow: 0 4px 0 darken(lighten($thm-1__layer-2, 5%), 7%), 0 5px 5px 1px $bg_shadow;
+        }
+    }
+}

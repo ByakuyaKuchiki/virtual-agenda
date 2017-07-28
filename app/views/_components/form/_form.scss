@@ -132,3 +132,21 @@
       }
     }
 }
+
+
+input {
+    min-width: 72px; // thumb-friendly
+    min-height: 35px; // thumb-friendly
+    color: inherit;
+    font: inherit;
+    background: none;
+    border: none;
+    border-bottom: 1px solid $light-white; // alpha 0.3
+    &:focus {
+        border-bottom: 1px solid $half-white; // alpha 0.7
+    }
+    &:focus,
+    &:hover {
+        outline: none;
+    }
+}
