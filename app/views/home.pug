@@ -2,142 +2,16 @@ extends layout/layout.pug
 
 block vars
 	//- page name
-	- var bodyClass = 'dashboard';
+	- var bodyClass = 'home';
 	- var pageName = 'Start page';
 
 block append defaultVendors
 	script(src='//cdn.jsdelivr.net/g/jquery@2.1.4')
-	script(src='//cdn.jsdelivr.net/g/gridster.js@0.5.6')
 
 block append additionalVendors
-	script(src='https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.0/masonry.pkgd.min.js')
 
 block append assetStyle
-	link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', rel='stylesheet', media='all')
-	link(href='//cdn.jsdelivr.net/gridster.js/0.5.6/jquery.gridster.min.css', rel='stylesheet', media='all')
-
 
 block content	
 	main.main--container
-		header.main-header
-			input#header-search(type='search', title='Search', placeholder='SEARCH')
-			#header-user
-				span Search
-		.main-content
-			+createReg()
-			#desktop-dashboard.desktop.card-list(style='display: none')
-				h1.desktop-heading Dashboard
-				.card-container
-					+card({
-						cardTitle: 'card 1',
-						icon: 'moon',
-						cardDescription: `<i>Cogito ergo sum</i> 
-						is a Latin philosophical proposition by René Descartes usually translated into English as "I think, therefore I am". The phrase originally appeared in French as 
-						<i>je pense, donc je suis</i> 
-						in his Discourse on the Method, so as to reach a wider audience than Latin would have allowed. It appeared in Latin in his later Principles of Philosophy.`
-					})
-					+card({
-						cardTitle: 'card 1',
-						icon: 'sun',
-						cardDescription: `<i>Cogito ergo sum</i> 
-						is a Latin philosophical proposition by René Descartes usually translated into English as "I think, therefore I am". The phrase originally appeared in French as 
-						<i>je pense, donc je suis</i> 
-						in his Discourse on the Method, so as to reach a wider audience than Latin would have allowed. It appeared in Latin in his later Principles of Philosophy.`
-					})
-					+card({
-						cardTitle: 'card 1',
-						icon: 'storm',
-						cardDescription: `<i>Cogito ergo sum</i> 
-						is a Latin philosophical proposition by René Descartes usually translated into English as "I think, therefore I am". The phrase originally appeared in French as 
-						<i>je pense, donc je suis</i> 
-						in his Discourse on the Method, so as to reach a wider audience than Latin would have allowed. It appeared in Latin in his later Principles of Philosophy.`
-					})
-					+card({
-						cardTitle: 'card 1',
-						icon: 'snow',
-						cardDescription: `<i>Cogito ergo sum</i> 
-						is a Latin philosophical proposition by René Descartes usually translated into English as "I think, therefore I am". The phrase originally appeared in French as 
-						<i>je pense, donc je suis</i> 
-						in his Discourse on the Method, so as to reach a wider audience than Latin would have allowed. It appeared in Latin in his later Principles of Philosophy.`
-					})
-					+card({
-						cardTitle: 'card 1',
-						icon: 'cloud',
-						cardDescription: `<i>Cogito ergo sum</i> 
-						is a Latin philosophical proposition by René Descartes usually translated into English as "I think, therefore I am". The phrase originally appeared in French as 
-						<i>je pense, donc je suis</i> 
-						in his Discourse on the Method, so as to reach a wider audience than Latin would have allowed. It appeared in Latin in his later Principles of Philosophy.`
-					})
-					+card({
-						cardTitle: 'card 1',
-						icon: 'sun',
-						cardDescription: `<i>Cogito ergo sum</i> 
-						is a Latin philosophical proposition by René Descartes usually translated into English as "I think, therefore I am". The phrase originally appeared in French as 
-						<i>je pense, donc je suis</i> 
-						in his Discourse on the Method, so as to reach a wider audience than Latin would have allowed. It appeared in Latin in his later Principles of Philosophy.`
-					})
-			// DESKTOP - TEST UI
-			#desktop-testui.desktop(style='display: none')
-				h1.desktop-heading Test UI
-				.flex-row
-					label Name
-					input(type='text')
-				.flex-row
-					label Name
-					input(type='text', disabled='')
-				.flex-row
-					label Name
-					input(type='text', value='testo', disabled='')
-				.flex-row
-					button Button
-					button(disabled='') Button
-				.flex-row
-					button(data-badge='3') Button
-					button(data-badge='3', disabled='') Button
-				.flex-row
-					button
-						i.fa.fa-cubes
-					button(disabled='')
-						i.fa.fa-cubes
-				.flex-row
-					select
-						optgroup(label='Option Group 1')
-							option Option 1
-							option Option 2
-							option Option 3
-						optgroup(label='Option Group 2')
-							option Option 4
-							option Option 5
-							option Option 6
-				.flex-row
-					progress
-				.flex-row
-					meter(min='0', max='100', low='20', high='80', optimum='50', value='50')
-				.flex-row
-					table(style='width: 400px')
-						caption Table Caption
-						thead
-							tr
-								th(style='width: 20%') Header 1
-								th(style='width: 30%') Header 2
-								th(style='width: 50%') Header 3
-						tbody
-							tr
-								td Cell 1
-								td Cell 2
-								td Cell 3
-							tr
-								td Cell 4
-								td Cell 5
-								td Cell 6
-							tr
-								td Cell 7
-								td Cell 8
-								td Cell 9
-						tfoot
-							tr
-								td Footer 1
-								td Footer 2
-								td Footer 3
-
 		

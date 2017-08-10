@@ -1,5 +1,6 @@
 @import './variables/vars';
-@import './basics/base';
+
+@import './fonts/all';
 
 @import './animations/anim';
 
@@ -7,14 +8,5 @@
 
 @import './layouts/layouts';
 
-
-@import './basics/base';
 @import '../views/_components/components';
-
-// @import './page/pages';
-
-// new components
-// @import '../views/new_components/menu/menu';
-@import '../views/new_components/cards/show-case';
-@import '../views/pages/dash';
 

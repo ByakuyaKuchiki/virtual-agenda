@@ -1,26 +1,5 @@
-@import 'icons';
-@import 'inputs';
-@import 'buttons';
-@import 'alerts';
+
 $font-path: "fonts" !default;
-
-.align-left {
-	text-align: left;
-}
-.align-right {
-	text-align: right;
-}
-.align-center {
-	text-align: center;
-}
-.align-justify {
-	text-align: justify;
-}
-
-.hide{
-	display: none !important;
-}
-
 
 @font-face {
 	font-family: 'Dancing in the Rainbow';
