@@ -25,3 +25,33 @@ mixin formGroup(options)
           i.formgroup--checkbox.icon.icon-checkbox--checked
         span.formgroup__label !{labelText}
       span.formgroup__error !{error}
+
+mixin singleInputForm(options)
+  - var formTitle = options.formTitle;
+  - var placeholderText = options.placeholderText;
+  - var waittingText = options.waittingText;
+  - var completeMessage = options.completeMessage;
+
+
+  .single-input-form
+    form.single-input-form__form
+      // #1 hover button
+      div
+        p.single-input-form__text= formTitle
+      // #2 text input
+      div
+        // Label to trigger #submit
+        label.submit-icon(for='submit')
+          i.fa.fa-chevron-right
+        input.single-input-form__input.single-input-form__text(type='text', placeholder=placeholderText, autocomplete='off')
+        // hidden submit button
+        input#submit(type='submit')
+      // #3 loading message
+      div
+        p.single-input-form__text.loader= waittingText
+      // #4 success message
+      div
+        // reset/retry button
+        span.reset-icon
+          i.fa.fa-refresh
+        p.single-input-form__text= completeMessage

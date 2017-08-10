@@ -1,0 +1,15 @@
+@keyframes ripple {
+	0% {width: 130px; height: 130px; border-width: 0;}
+	20% {width: 135px; height: 135px; border-width: 5px;}
+/*	22% {border-width: 2px;}*/
+	30% {width: 145px; height: 145px; border-width: 0;}
+	31%, 100% {width: 130px; height: 130px; border-width: 0;}
+	
+}
+
+@keyframes pulse {
+	0%, 100% {border-width: .2rem;}
+	10% {border-width: .1rem;}
+	15% {border-width: .45rem;}
+	20% {border-width: .2rem;}
+}

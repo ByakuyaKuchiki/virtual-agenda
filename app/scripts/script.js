@@ -5,6 +5,8 @@ import { registerInstance } from '../views/_components/authentification/register
 import { uiControlInstance } from './utilities/ui-control.js';
 
 
+import { dashItemInstance } from './pages/dash.js';
+
 import {menuInstance} from '../views/new_components/menu/menu.js';
 import {showCaseInstance} from '../views/new_components/cards/show-case.js';
 export class Main {
@@ -24,9 +26,9 @@ export class Main {
       registerInstance._call();
     }
 
-    if($('body').hasClass('dashboard--2')){
+    if($('body').hasClass('dashboard-items')){
       console.log('test');
-      showCaseInstance._cardCall();
+      dashItemInstance._call();
     }
 
     menuInstance._switchingMenu();

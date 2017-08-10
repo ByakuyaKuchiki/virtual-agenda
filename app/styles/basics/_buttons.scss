@@ -38,7 +38,6 @@ $bg_shadow: rgba(0, 0, 0, 0.4);
         background-color: $thm-1__over;
         text-shadow: 0 -1px -1px darken($thm-1__over, 7%);
         box-shadow: 0 4px 0 darken($thm-1__over, 7%), 0 5px 5px 1px $bg_shadow;
-        transition: all .15s ease-in-out;
         &:hover {
             background-color: lighten($thm-1__over, 5%);
             text-shadow: 0 -1px -1px darken(lighten($thm-1__over, 5%), 7%);
@@ -49,7 +48,6 @@ $bg_shadow: rgba(0, 0, 0, 0.4);
         background-color: $thm-1__layer-2;
         text-shadow: 0 -1px -1px darken($thm-1__layer-2, 7%);
         box-shadow: 0 4px 0 darken($thm-1__layer-2, 7%), 0 5px 5px 1px $bg_shadow;
-        transition: all .15s ease-in-out;
         &:hover {
             background-color: lighten($thm-1__layer-2, 5%);
             text-shadow: 0 -1px -1px darken(lighten($thm-1__layer-2, 5%), 7%);

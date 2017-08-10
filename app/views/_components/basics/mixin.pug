@@ -79,3 +79,15 @@ mixin socialBtn(options)
   .cta__btn(class= ctaClass)
     i.cta__icon.icon(class= 'icon-social-' + ctaIcon)
     a.cta__text(href= ctaLink)= ctaText
+
+mixin alert(options)
+
+  - var additionalClass = options.additionalClass;
+  - var errorText = options.errorText || 'error';
+
+  .error-box(class=additionalClass)
+    .item-tile
+      .item-icon--ripple
+        .item-icon--ripple-container
+      span.message= errorText
+  

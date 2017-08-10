@@ -51,3 +51,24 @@ mixin showCard(options)
                     li.sub-command__item Detail
             i.commands__nav.commands__nav--right.icon.icon-right
 
+mixin generateItemName()
+    .card--item-name
+        .front
+            h3.cardTitle {{item.name}}
+        .back
+            .content
+                h3.cardTitle Edit Item name
+                br
+                +formGroup({
+                    labelText: 'Item name: ',
+                    error: 'error text'
+                })
+            footer
+                +ctaBtn({
+                    ctaClass: 'button button--basic',
+                    ctaText: 'save'
+                })
+                +ctaBtn({
+                    ctaClass: 'button button--secondary',
+                    ctaText: 'remove'
+                })
