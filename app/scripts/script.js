@@ -1,11 +1,14 @@
 
-import { uiControlInstance } from './utilities/ui-control.js';
+import { heroSliderInstance } from '../views/_components/slider/_hero-slider';
+
+import { homeInstance } from './pages/_home';
 
 export class Main {
 
   constructor() {
-    // dashboardInstance._call();
-    // cardInstance._call();
+    if ($('body').hasClass('home-page')) {
+      homeInstance._call();
+    }
   }
 }
 

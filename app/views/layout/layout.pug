@@ -6,10 +6,10 @@ html(lang='de')
 	- var bodyClass = 'template'
 	block vars
 	body(class=bodyClass)
-		include ../includes/header.pug
-		main.wrapper.page-border
-			.page-content
-				//- include ../_components/navigation/aside.pug
-				block content
-						section
+		//- include ../includes/header.pug
+		//- main.wrapper.page-border
+		//- 	.page-content
+		//- 		//- include ../_components/navigation/aside.pug
+		block content
+			section
 		include ../includes/footer.pug

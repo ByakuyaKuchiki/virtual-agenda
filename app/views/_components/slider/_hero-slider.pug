@@ -1,0 +1,45 @@
+mixin heroSlider(options)
+    - var texts = options.texts;
+    - var images = options.images;
+    - var articles = options.articles;
+    
+    .hero-container
+        .cta.cta--prev
+            svg(xmlns='http://www.w3.org/2000/svg', width='50', height='50', viewbox='0 0 50 50')
+                path(fill='#ffffff', d='M30.55 39.69c.567-.475.645-1.314.17-1.882L20.044 25 30.72 12.19c.474-.566.396-1.408-.17-1.88-.564-.474-1.407-.397-1.88.17L17.28 24.145c-.208.248-.312.552-.312.855s.104.608.31.855L28.67 39.52c.474.566 1.316.642 1.882.17z')
+        .cta.cta--next
+            svg(xmlns='http://www.w3.org/2000/svg', width='50', height='50', viewbox='0 0 50 50')
+                path(fill='#ffffff', d='M19.45 10.31c-.567.475-.644 1.314-.17 1.88L29.956 25 19.28 37.81c-.473.566-.396 1.408.17 1.88s1.408.397 1.88-.17l11.39-13.664c.208-.248.312-.552.312-.855s-.104-.607-.31-.854L21.33 10.48c-.474-.566-1.316-.643-1.882-.17z')
+        .cta.cta--down
+            svg(xmlns='http://www.w3.org/2000/svg', width='50', height='50', viewbox='0 0 50 50')
+                path(fill='#ffffff', d='M40.69 19.87c-.475-.568-1.313-.645-1.88-.172L26 30.374 13.19 19.697c-.565-.472-1.408-.395-1.88.17-.474.567-.397 1.41.17 1.882l13.665 11.386c.248.207.552.312.854.312.303 0 .607-.104.854-.312L40.52 21.75c.567-.474.644-1.315.17-1.88z')
+        .text-wrapper
+            each textVal, i in texts
+                - var classes = 'text-container text-container--' + i;
+                if i == 0
+                    - classes = classes + ' text--active';
+                div(class= classes, data-slide=i)
+                    - for (var x = 1; x <= 3; x++)
+                        .text-slice
+                            .text-main-wrapper
+                                .text-main-inner!= textVal.title
+            
+                    .text-label-container
+                        .text-label= textVal.label
+        .slider-container
+            div
+                - for (var x = 0; x <= 11; x++)
+                    .slider-slice
+                        each imageLink, i in images
+                            - var classes = 'slider-slice-imageContainer image--' + i;
+                            if i == 0
+                                - classes = classes + ' image--active';
+                            div(class=classes)
+                                img(src=imageLink, alt='image--' + i)
+            .slider-overlay
+    // CLOSE HEADER
+    section.page-container
+        bubtton.cta--close close
+        each article , i in articles
+            article(data-article=i)!= article
+
