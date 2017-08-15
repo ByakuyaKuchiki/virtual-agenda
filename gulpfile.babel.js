@@ -45,6 +45,9 @@ import puglint from 'pug-lint';
 import childProcess from 'child_process';
 import os from 'os';
 
+// concats
+import concat from 'gulp-concat';
+
 let nbrErrorJade;
 let nbrErrorJS;
 let nbrErrorCSS;
@@ -424,6 +427,14 @@ export function monitoring (callback) {
   });
 }
 
+export function buildVendor() {
+    return gulp.src('./app/vendors/*.js')
+        .pipe(sourcemaps.init())
+        .pipe(concat('vendors.js'))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./build/resources/js'));
+};
+
 // ########################################
 
 export function watchTask (done) {
@@ -446,7 +457,7 @@ export { lint };
 const css = gulp.series(lintStylesTask, stylesTask);
 export { css };
 
-const js = gulp.series(lintJavaScript, javaScriptTask);
+const js = gulp.series(lintJavaScript, javaScriptTask, buildVendor);
 export { js };
 
 // Global tasks
